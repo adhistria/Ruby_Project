@@ -1,0 +1,9 @@
+map_size : 15x20
+user_coordinate : [15,20]
+number_of_drivers : 5
+coordinate_of_drivers :
+[15,10]
+[13,5]
+[14,6]
+[7,10]
+[9,19]
