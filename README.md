@@ -19,8 +19,8 @@ Sedangkan untuk pengambilan data menggunakan format file csv, karena format csv 
 * [Ruby]
 
 ## Authors
-
+* **Adhi Satria**
 ## Read File From CSV
 File csv harus berformatkan sama seperti yang telah ada didalam folder
-* **Adhi Satria**
+
 
