@@ -3,9 +3,9 @@ require 'pathname'
 
 class Main
 	def gocli(*args)
-		
 		if args.size==0
 			gojek = Gojek.new
+			gojek.menu
 		elsif args.size==1
 			gojek = Gojek.new(args[0])
 			gojek.order_go_ride
@@ -20,11 +20,13 @@ class Main
 		syntax = ""
 		while syntax!="quit"
 			print "2.5.0 :00#{i} > "
-			syntax = gets.chomp
+			syntax = gets.chomp.downcase
 			# case if go cli or quit or help, if not, give direct to help
 			if syntax == "gocli"
-			   self.gocli
-			   puts "Object Gojek Created"
+				self.gocli
+				# gocli.menu
+			   # self.gocli
+			   # puts "Welcome To GoCli"
 			elsif syntax.include? "gocli"
 				syntax.slice! "gocli"
 				if(syntax.index('(')==0 and syntax.count("(") ==1 and syntax.count(")")==1)
@@ -32,11 +34,10 @@ class Main
 					syntax.slice! ")"
 					syntax.gsub! /"/, ''
 					syntax.gsub! /'/, ''
-					puts syntax
 					if(syntax.include? ".csv")
 						if(File.exist?(syntax)) 
 							  self.gocli(syntax)
-							  puts "Object Gojek Created"
+							  puts "Welcome To GoCli"
 							else 
 							  puts '#{syntax} or directory exists'
 							end
@@ -48,7 +49,7 @@ class Main
 								x = Integer(syntax[1])
 								y = Integer(syntax[2])
 								self.gocli(n,x,y)
-								puts "Object Gojek Created"
+								puts "Welcome To GoCli"
 							end
 						else
 							puts "Wrong Input"
@@ -56,42 +57,25 @@ class Main
 					else
 						puts "Wrong Input"
 					end
-				else 
-					puts "Wrong Input"
 				end
 			elsif syntax == "help"
 				puts "To Run Go Cli"
 				puts "-- gocli without paramater"
 				puts "-- gocli(file_name.csv) with csv file_name parameter"
 				puts "-- gocli(10,20,30) with 3 numbers as params  "
-				puts "Exit with write quit"
+				puts "-- quit to Exit"
+			elsif syntax=="quit"
+				puts "Bye bye" 
 			else
 				puts "Wrong Input, Check -- help"
 			end	
 			i+=1
 		end
 	end
-
-	def show_map
-		
-	end
-
-	def view_history
-
-
-	end
+	
 end
 
 
 main = Main.new
 
-#Ruby function to check directory or file existence
-# if(File.exist?('adhi.csv')) 
-#   puts 'file or directory exists'
-# else 
-#   puts 'file or directory not found'
-# end
-
 main.home_page
-# main.gocli('gojek.csv')
-
