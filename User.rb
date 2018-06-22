@@ -50,5 +50,9 @@ class User
 		@coordinate
 	end
 
+	def set_coordinate(x,y)
+		@coordinate = [x,y]
+	end
+
 	# def 
 end

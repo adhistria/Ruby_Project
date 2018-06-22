@@ -154,6 +154,7 @@ class Gojek
 			array_of_history.push("Navigation")
 			array_of_route.each {|x| array_of_history.push(x)}
 			@user.save_history(array_of_history)
+			@user.set_coordinate(x_coor,y_coor)
 			puts "Enter To Exit"
 			gets
 			@driver[index_near_gojek].set_coordinate(x_coor,y_coor)
