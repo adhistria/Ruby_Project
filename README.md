@@ -4,9 +4,9 @@ Project untuk menyelesaikan tugas second stage compfest
 
 ## gocli command
 
-* -- gocli without paramater
-* -- gocli(file_name.csv) with csv file_name parameter
-* -- gocli(10,20,30) with 3 numbers as params  
+* gocli tanpa paramater
+* gocli(file_name.csv) dengan parameter file csv
+* gocli(10,20,30) dengan 3 parameter numerik
 * -- quit to Exit
 
 ## Format Penyimpanan File dan Pengambilan File
@@ -20,5 +20,7 @@ Sedangkan untuk pengambilan data menggunakan format file csv, karena format csv 
 
 ## Authors
 
+## Read File From CSV
+File csv harus berformatkan sama seperti yang telah ada didalam folder
 * **Adhi Satria**
 
