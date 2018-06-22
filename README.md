@@ -7,7 +7,7 @@ Project untuk menyelesaikan tugas second stage compfest
 * gocli tanpa paramater
 * gocli(file_name.csv) dengan parameter file csv
 * gocli(10,20,30) dengan 3 parameter numerik
-* -- quit to Exit
+* quit to Exit
 
 ## Format Penyimpanan File dan Pengambilan File
 
